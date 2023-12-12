@@ -1,4 +1,4 @@
-const URL = ``
+const URL = `https://bible-api.com/?random=verse`
 //https://api.thecatapi.com/v1/images/search?limit=20&api_key=live_Kc9B34VPmJZP7JgVkWX1BLcmB0eZ1H9mHLpCdNIXnxaz121Aq5Wevar8dpFbH3h
  async function getData(URL){
     try{
