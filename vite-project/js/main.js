@@ -1,17 +1,8 @@
+
+
 const URL = `https://pokeapi.co/api/v2/item?limit=2110`
 
-
-
-
-
-
-
-
-
-
-
-
-//https://api.thecatapi.com/v1/images/search?limit=20&api_key=live_Kc9B34VPmJZP7JgVkWX1BLcmB0eZ1H9mHLpCdNIXnxaz121Aq5Wevar8dpFbH3h
+Domselectors.form.addEventlistener()
 
 // filter by items by usage 
 // list items 
