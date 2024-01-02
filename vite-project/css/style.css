@@ -1,0 +1,71 @@
+:root{
+    --light-blue: #2998ff;
+    --white: #ffffe6; 
+    --black: #000;
+    --red: #f87171;
+    --yellow: #ffff26;
+    --brown:#ad5a00;
+    --orange: #ff7f50;
+    --h1: 7.594rem;
+    --h2: 5.063rem;
+    --h3: 3.375rem;
+    --h4: 2.25rem;
+    --h5: 1.5rem;
+  
+    --primary: var(var(--white));
+    --secondary: var(var(--light-blue));
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card{
+    height: 40vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    margin: 10vh;
+    background-color: var(--primary);
+  }
+  .dark{
+    --primary:var(--light-blue);
+    --secondary:var(--red);
+  }
+  
+  .light{
+    --primary:var(--white);
+    --secondary:var(--yellow);
+  }
+  h1,h2,h3,h4,h5{
+    text-align: center;
+  }
+  
+  
+  h1{
+    font-size: var(--h1);
+  }
+  h2{
+    font-size: var(--h2);
+  }
+  h3{
+    font-size: var(--h3);
+  }
+  h4{
+    font-size: var(--h4);
+  }
+  h5{
+    font-size: var(--h5);
+  }
+  
+  .top{
+    background-color: var(--primary);
+    text-align: center;
+    margin: 1rem;
+  }
+  .selects{
+    background-color: var(--secondary);
+    height: 80vh;
+  }
