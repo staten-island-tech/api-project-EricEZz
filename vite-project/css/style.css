@@ -1,19 +1,17 @@
 :root{
-    --light-blue: #2998ff;
+    --light-blue: #66ccff;
     --white: #ffffe6; 
     --black: #000;
+    --torq: #90fee2;
     --red: #f87171;
     --yellow: #ffff26;
-    --brown:#ad5a00;
+    --brown:#f1b374;
     --orange: #ff7f50;
     --h1: 7.594rem;
     --h2: 5.063rem;
     --h3: 3.375rem;
     --h4: 2.25rem;
     --h5: 1.5rem;
-  
-    --primary: var(var(--white));
-    --secondary: var(var(--light-blue));
   }
   .card:hover {
     transform: scale(1.05);
@@ -31,13 +29,13 @@
     background-color: var(--primary);
   }
   .dark{
-    --primary:var(--light-blue);
-    --secondary:var(--red);
+    --primary:var(--torq);
+    --secondary:var(--white);
   }
   
   .light{
-    --primary:var(--white);
-    --secondary:var(--yellow);
+    --primary:var(--brown);
+    --secondary:var(--light-blue);
   }
   h1,h2,h3,h4,h5{
     text-align: center;

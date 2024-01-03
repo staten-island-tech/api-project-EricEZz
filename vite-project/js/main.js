@@ -1,5 +1,5 @@
 import {DOMSelectors} from './Dom.js' 
-const URL = `https://pokeapi.co/api/v2/item?limit=2110`
+const URL = `https://pokeapi.co/api/v2/item-catergory?limit`
 
 function themes(){
     document.querySelector(".but").addEventListener("click",function(){
