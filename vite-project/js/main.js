@@ -1,13 +1,26 @@
 import {DOMSelectors} from './Dom.js' 
 const URL = `https://pokeapi.co/api/v2/item?limit=2110`
 
+function themes(){
+    document.querySelector(".but").addEventListener("click",function(){
+        if(document.body.classList.contains("light")){
+            document.body.classList.add("dark");
+            document.body.classList.remove("light");
+        } else{
+            document.body.classList.add("light");
+            document.body.classList.remove("dark");
+        }
+    });
+    }
+themes();
+
 function clearFields(){
     DOMSelectors.container.innerHTML = ""; 
 };
 
 function load(){
     clearFields();
-URL.forEach(item => DOMSelectors.container.insertAdjacentHTML(
+forEach(item => DOMSelectors.container.insertAdjacentHTML(
     "beforeend" , 
         `  <div class="card">
         <h2 class="card-head" >${item.name}</h2>
