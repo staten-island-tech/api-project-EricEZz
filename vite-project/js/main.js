@@ -1,8 +1,22 @@
-
-
+import {DOMSelectors} from './Dom.js' 
 const URL = `https://pokeapi.co/api/v2/item?limit=2110`
 
-Domselectors.form.addEventlistener()
+function clearFields(){
+    DOMSelectors.container.innerHTML = ""; 
+};
+
+function load(){
+    clearFields();
+URL.forEach(item => DOMSelectors.container.insertAdjacentHTML(
+    "beforeend" , 
+        `  <div class="card">
+        <h2 class="card-head" >${item.name}</h2>
+        <img src = ${cam.img} class = "card-img"/>
+           <h3 class="card">${cam.price}</h3>
+           </div>`)
+
+)};
+load();
 
 // filter by items by usage 
 // list items 

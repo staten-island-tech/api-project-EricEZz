@@ -69,3 +69,20 @@
     background-color: var(--secondary);
     height: 80vh;
   }
+  .container{
+    background-color: var(--secondary);
+  }
+  .btn,
+.but{
+text-transform: uppercase;
+padding: 1.5rem 4 rem;
+display: inline-block;
+margin: 1rem auto;
+font-size: 2rem;
+border-radius: 10rem;
+transition: all 0.2s;
+}
+.butn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 0.5rem #000020;
+}
