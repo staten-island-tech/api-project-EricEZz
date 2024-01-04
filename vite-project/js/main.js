@@ -1,13 +1,12 @@
 
 
-const URL = `https://pokeapi.co/api/v2/item?limit=2110`
+const URL = `https://pokeapi.co/api/v2/item/`
 
-Domselectors.form.addEventlistener()
 
 // filter by items by usage 
 // list items 
 
-/*  async function getData(URL){
+  async function getData(URL){
     try{
         //requesting a response REST API's
         const response = await fetch(URL);
@@ -23,7 +22,7 @@ Domselectors.form.addEventlistener()
         document.querySelector("h1").textContent = "No cat :(";
     }
 }
-getData(URL);   */
+getData(URL);   
  
 /* fetch(URL)
 .then(response => {
