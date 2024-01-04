@@ -1,7 +1,46 @@
+import {DOMSelectors} from './Dom.js' 
+const URL = `https://pokeapi.co/api/v2/item/?limit`
 
+function themes(){
+    document.querySelector(".but").addEventListener("click",function(){
+        if(document.body.classList.contains("light")){
+            document.body.classList.add("dark");
+            document.body.classList.remove("light");
+        } else{
+            document.body.classList.add("light");
+            document.body.classList.remove("dark");
+        }
+    });
+    }
+themes();
+try {
+    const response = await fetch (URL);
+    if (response.status !=200){
+        throw new error(response.statusText);
+    }
+const info = await response.json();
+document.getElementById("api-response").textContent = data.content;
+    console.log(info)
+    document.querySelector("h1").textContent = data.name;
+} catch (error) {
+    console.log(error);
+}
 
-const URL = `https://pokeapi.co/api/v2/item/`
+function clearFields(){
+    DOMSelectors.container.innerHTML = ""; 
+};
 
+function load(){
+info.forEach(item => DOMSelectors.container.insertAdjacentHTML(
+    "beforeend" , 
+        `  <div class="card">
+        <h2 class="card-head" >${item.name}</h2>
+        <img src = ${item.img} alt ="" class = "card-img"/>
+           <h3 class="card">${item.price}</h3>
+           </div>`)
+
+)};
+load();
 
 // filter by items by usage 
 // list items 
