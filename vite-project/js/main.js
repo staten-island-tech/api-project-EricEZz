@@ -1,7 +1,49 @@
 import {DOMSelectors} from './Dom.js' 
-const URL = `https://pokeapi.co/api/v2/item/?limit`
+const URL = `https://pokeapi.co/api/v2/item/?limit2110`
+async function getData(URL){
 
-function themes(){
+    try{
+        //requesting a response REST API's
+        const response = await fetch(URL);
+        if(response.status !=200){
+            throw new Error(response.statusText);
+        }
+        //convert response to JSON 
+        const data = await response.json();
+        console.log(data);
+        // document.querySelector("h1").textContent = data.content;
+        function themes(){
+            document.querySelector(".but").addEventListener("click",function(){
+                if(document.body.classList.contains("light")){
+                    document.body.classList.add("dark");
+                    document.body.classList.remove("light");
+                } else{
+                    document.body.classList.add("light");
+                    document.body.classList.remove("dark");
+                }
+            });
+            }
+        themes();
+        data.results.forEach( obj => 
+            DOMSelectors.container.insertAdjacentHTML(
+                "beforeend" , 
+        `  <div class="card">
+        <h2 class="card-head" >${obj.name}</h2>
+
+           </div>`
+            )
+            
+        );
+
+
+    } catch(error) {
+        console.log(error, "uh oh!");
+        document.querySelector("h1").textContent = "No cat :(";
+    }
+}
+getData(URL);   
+
+/* function themes(){
     document.querySelector(".but").addEventListener("click",function(){
         if(document.body.classList.contains("light")){
             document.body.classList.add("dark");
@@ -12,21 +54,9 @@ function themes(){
         }
     });
     }
-themes();
-try {
-    const response = await fetch (URL);
-    if (response.status !=200){
-        throw new error(response.statusText);
-    }
-const info = await response.json();
-document.getElementById("api-response").textContent = data.content;
-    console.log(info)
-    document.querySelector("h1").textContent = data.name;
-} catch (error) {
-    console.log(error);
-}
+themes(); */
 
-function clearFields(){
+/* function clearFields(){
     DOMSelectors.container.innerHTML = ""; 
 };
 
@@ -40,12 +70,12 @@ info.forEach(item => DOMSelectors.container.insertAdjacentHTML(
            </div>`)
 
 )};
-load();
+load(); */
 
 // filter by items by usage 
 // list items 
 
-  async function getData(URL){
+/*   async function getData(URL){
     try{
         //requesting a response REST API's
         const response = await fetch(URL);
@@ -62,7 +92,7 @@ load();
     }
 }
 getData(URL);   
- 
+  */
 /* fetch(URL)
 .then(response => {
     if (!response.ok) {
