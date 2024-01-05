@@ -18,16 +18,16 @@
   }
   
   .card{
-    height: 40vh;
-    width: 20vw;
+    width: 13%;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     border-radius: 10px;
-    margin: 10vh;
+    margin: 10px;
     background-color: var(--primary);
   }
+
   .dark{
     --primary:var(--torq);
     --secondary:var(--white);
@@ -65,16 +65,20 @@
   }
   .selects{
     background-color: var(--secondary);
-    height: 80vh;
+    display: flex;
   }
   .container{
     background-color: var(--secondary);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   .btn,
 .but{
 text-transform: uppercase;
 padding: 1.5rem 4 rem;
 display: inline-block;
+align-items: center;
 margin: 1rem auto;
 font-size: 2rem;
 border-radius: 10rem;

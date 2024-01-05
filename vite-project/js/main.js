@@ -1,5 +1,5 @@
 import {DOMSelectors} from './Dom.js' 
-const URL = `https://pokeapi.co/api/v2/item/?limit2110`
+const URL = `https://pokeapi.co/api/v2/item/?limit=100`
 async function getData(URL){
 
     try{
@@ -23,25 +23,25 @@ async function getData(URL){
                 }
             });
             }
-        themes();
         data.results.forEach( obj => 
             DOMSelectors.container.insertAdjacentHTML(
                 "beforeend" , 
         `  <div class="card">
-        <h2 class="card-head" >${obj.name}</h2>
-
+        <h3 class="card-head" >${obj.name}</h3>
+        <button class="but">more info</button>
            </div>`
             )
             
         );
 
-
+        themes();
     } catch(error) {
-        console.log(error, "uh oh!");
-        document.querySelector("h1").textContent = "No cat :(";
+        console.log(error, "unlucky");
+        document.querySelector("h1").textContent = "No pokemon";
     }
 }
 getData(URL);   
+//sprite.default
 
 /* function themes(){
     document.querySelector(".but").addEventListener("click",function(){
