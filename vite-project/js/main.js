@@ -10,7 +10,17 @@ async function getData(URL){
         }
         //convert response to JSON 
         const data = await response.json();
-        console.log(data);
+        const dataresults = data.results;
+        
+        async function itemimg(results) {
+            const Response = await fetch(results.url);
+            const itemData = await Response.json();
+            return {
+                name: results.name,
+                image: itemData.sprites.default , 
+            };
+        }
+        itemimg();
         // document.querySelector("h1").textContent = data.content;
         function themes(){
             document.querySelector(".but").addEventListener("click",function(){
