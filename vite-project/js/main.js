@@ -12,15 +12,15 @@ async function getData(URL){
         const data = await response.json();
         const dataresults = data.results;
         
-        async function itemimg(results) {
+      /*   async function itemimg(results) {
             const Response = await fetch(results.url);
             const itemData = await Response.json();
             return {
                 name: results.name,
                 image: itemData.sprites.default , 
             };
-        }
-        itemimg();
+        } */
+        
         // document.querySelector("h1").textContent = data.content;
         function themes(){
             document.querySelector(".but").addEventListener("click",function(){
@@ -33,18 +33,37 @@ async function getData(URL){
                 }
             });
             }
-        data.results.forEach( obj => 
+            function clearFields(){
+                DOMSelectors.container.innerHTML = ""; 
+            };
+        function load() {
+            data.results.forEach( obj => 
             DOMSelectors.container.insertAdjacentHTML(
                 "beforeend" , 
         `  <div class="card">
         <h3 class="card-head" >${obj.name}</h3>
-        <button class="but">more info</button>
+        <button class="button">more info</button>
            </div>`
             )
             
-        );
-
+        );}
         themes();
+        load();
+        // DOMSelectors.buttons.addEventListener("click", function(){
+        //     buttons.forEach( result =>
+        //         DOMSelectors)
+        // })
+        async function pokeitems(){
+
+        }
+        function info(){
+            let x = document.querySelectorAll(".button")
+            x.forEach((ob)=> ob.addEventListener("click"), async function(){
+                clearFields();
+                pokeitems();  
+            })
+        }
+
     } catch(error) {
         console.log(error, "unlucky");
         document.querySelector("h1").textContent = "No pokemon";

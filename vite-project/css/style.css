@@ -73,7 +73,8 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .btn,
+.button,
+.btn,
 .but{
 text-transform: uppercase;
 padding: 1.5rem 4 rem;
