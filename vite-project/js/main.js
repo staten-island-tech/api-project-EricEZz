@@ -1,5 +1,5 @@
-import {DOMSelectors} from './Dom.js' 
-const URL = `https://pokeapi.co/api/v2/item/?limit=100`
+import {DOMSelectors} from './dom.js' 
+const URL = `https://pokeapi.co/api/v2/item/?limit=21100`
 async function getData(URL){
 
     try{
