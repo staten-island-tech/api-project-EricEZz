@@ -4,7 +4,8 @@ const DOMSelectors = {
     card: document.querySelector(".card"),
     container: document.querySelector(".container"),
     buttons: document.querySelector(".but"),
-    moreinfo: document.querySelector(".button"),
+    allbtns: document.querySelector(".button"),
+    searchInput: document.querySelector("#searchInput"),
     btn:document.querySelector(".btn")
 };
 export{DOMSelectors};
