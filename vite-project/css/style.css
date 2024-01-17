@@ -16,7 +16,7 @@
   .card:hover {
     transform: scale(1.05);
   }
-  #searchinput{
+  .searchinput{
     margin: 10px;
     display: flex;
     flex-wrap: wrap;

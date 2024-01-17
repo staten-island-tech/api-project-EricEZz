@@ -42,7 +42,7 @@ async function getData(URL) {
         DOMSelectors.container.insertAdjacentHTML(
           "beforeend",
           `<div class="card">
-            <h3 class="card-head">${item.name}</h3>
+            <h2 class="card-head">${item.name}</h2>
             <p>Category: ${item.category}</p>
             <img src="${item.img}" alt="${item.name}">
            </div>`
